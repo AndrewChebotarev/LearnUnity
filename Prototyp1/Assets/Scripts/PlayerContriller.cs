@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class PlayerContriller : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Vector3 moveVector = new Vector3(0, 0, 1);
+
     void Start()
     {
         
@@ -11,6 +12,7 @@ public class PlayerContriller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Move the vehicle forward
+        transform.Translate(moveVector);
     }
 }

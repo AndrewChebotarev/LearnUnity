@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerContriller : MonoBehaviour
 {
-    private Vector3 moveVector = new Vector3(0, 0, 1);
+    public float speed = 20.0f;
 
     void Start()
     {
@@ -13,6 +13,6 @@ public class PlayerContriller : MonoBehaviour
     void Update()
     {
         // Move the vehicle forward
-        transform.Translate(moveVector);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 }

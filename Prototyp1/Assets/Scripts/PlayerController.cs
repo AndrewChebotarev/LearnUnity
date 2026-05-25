@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class PlayerContriller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float speed = 20.0f;
+    public float turnSpeed = 0f;
 
     void Start()
     {
@@ -14,5 +15,6 @@ public class PlayerContriller : MonoBehaviour
     {
         // Move the vehicle forward
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        transform.Translate(Vector3.right * Time.deltaTime * turnSpeed);
     }
 }
